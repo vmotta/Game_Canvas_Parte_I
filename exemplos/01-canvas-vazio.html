@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 1 — Canvas vazio</title>
+
+    <style>
+        canvas {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #d3d3d3;
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Canvas vazio</h1>
+    <p>O JavaScript criará o Canvas antes deste parágrafo.</p>
+
+    <script>
+        "use strict";
+
+        const gameArea = {
+            canvas: document.createElement("canvas"),
+            context: null,
+
+            start() {
+                this.canvas.width = 480;
+                this.canvas.height = 270;
+
+                const context = this.canvas.getContext("2d");
+
+                if (context === null) {
+                    throw new Error("Contexto 2D indisponível.");
+                }
+
+                this.context = context;
+
+                document.body.insertBefore(
+                    this.canvas,
+                    document.body.firstChild
+                );
+            }
+        };
+
+        function startGame() {
+            gameArea.start();
+        }
+
+        startGame();
+    </script>
+</body>
+</html>
