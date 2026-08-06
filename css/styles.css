@@ -1,0 +1,104 @@
+/*
+ * Game Canvas — Parte I
+ * Estilos separados do HTML para facilitar manutenção e reutilização.
+ */
+
+:root {
+    color-scheme: light;
+
+    --page-background: #f5f7fb;
+    --surface: #ffffff;
+    --text: #172033;
+    --muted-text: #4d5870;
+    --border: #c8cfdd;
+    --canvas-background: #f1f1f1;
+    --focus: #0b57d0;
+
+    font-family:
+        Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: var(--page-background);
+    color: var(--text);
+}
+
+.page {
+    width: min(960px, calc(100% - 2rem));
+    margin-inline: auto;
+    padding-block: 2rem;
+}
+
+.page__header,
+.game-container {
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    background: var(--surface);
+}
+
+.page__header {
+    margin-bottom: 1.5rem;
+}
+
+.eyebrow {
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+h1,
+h2 {
+    line-height: 1.2;
+}
+
+h1 {
+    margin-block: 0.5rem;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.introduction,
+.instructions,
+#game-description {
+    color: var(--muted-text);
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+.game-container {
+    overflow-x: auto;
+}
+
+canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    border: 1px solid #d3d3d3;
+    background-color: var(--canvas-background);
+}
+
+canvas:focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 4px;
+}
+
+noscript {
+    display: block;
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 1px solid #9b1c1c;
+    background: #fff1f1;
+}
