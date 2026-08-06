@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 3 — Animação</title>
+
+    <style>
+        canvas {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #d3d3d3;
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quadrado em movimento</h1>
+
+    <script>
+        "use strict";
+
+        const gameArea = {
+            canvas: document.createElement("canvas"),
+            context: null,
+
+            start() {
+                this.canvas.width = 480;
+                this.canvas.height = 270;
+
+                const context = this.canvas.getContext("2d");
+
+                if (context === null) {
+                    throw new Error("Contexto 2D indisponível.");
+                }
+
+                this.context = context;
+                document.body.prepend(this.canvas);
+            },
+
+            clear() {
+                this.context.clearRect(
+                    0,
+                    0,
+                    this.canvas.width,
+                    this.canvas.height
+                );
+            }
+        };
+
+        class Component {
+            constructor(width, height, color, x, y) {
+                this.width = width;
+                this.height = height;
+                this.color = color;
+                this.x = x;
+                this.y = y;
+            }
+
+            draw(context) {
+                context.fillStyle = this.color;
+                context.fillRect(
+                    this.x,
+                    this.y,
+                    this.width,
+                    this.height
+                );
+            }
+        }
+
+        let gamePiece;
+
+        function startGame() {
+            gameArea.start();
+            gamePiece = new Component(30, 30, "red", 10, 120);
+            requestAnimationFrame(updateGameArea);
+        }
+
+        function updateGameArea() {
+            gameArea.clear();
+            gamePiece.x += 1;
+
+            if (gamePiece.x > gameArea.canvas.width) {
+                gamePiece.x = -gamePiece.width;
+            }
+
+            gamePiece.draw(gameArea.context);
+            requestAnimationFrame(updateGameArea);
+        }
+
+        startGame();
+    </script>
+</body>
+</html>
