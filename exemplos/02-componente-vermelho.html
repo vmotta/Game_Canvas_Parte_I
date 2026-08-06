@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 2 — Componente vermelho</title>
+
+    <style>
+        canvas {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #d3d3d3;
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Componente vermelho</h1>
+    <p>Um quadrado vermelho foi adicionado à área do jogo.</p>
+
+    <script>
+        "use strict";
+
+        const gameArea = {
+            canvas: document.createElement("canvas"),
+            context: null,
+
+            start() {
+                this.canvas.width = 480;
+                this.canvas.height = 270;
+
+                const context = this.canvas.getContext("2d");
+
+                if (context === null) {
+                    throw new Error("Contexto 2D indisponível.");
+                }
+
+                this.context = context;
+                document.body.prepend(this.canvas);
+            }
+        };
+
+        class Component {
+            constructor(width, height, color, x, y) {
+                this.width = width;
+                this.height = height;
+                this.color = color;
+                this.x = x;
+                this.y = y;
+            }
+
+            draw(context) {
+                context.fillStyle = this.color;
+                context.fillRect(
+                    this.x,
+                    this.y,
+                    this.width,
+                    this.height
+                );
+            }
+        }
+
+        function startGame() {
+            gameArea.start();
+
+            const gamePiece = new Component(
+                30,
+                30,
+                "red",
+                10,
+                120
+            );
+
+            gamePiece.draw(gameArea.context);
+        }
+
+        startGame();
+    </script>
+</body>
+</html>
