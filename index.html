@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Introdução didática ao HTML Canvas com JavaScript."
+    >
+
+    <title>Game Canvas — Parte I</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <main class="page">
+        <header class="page__header">
+            <p class="eyebrow">Game Design</p>
+            <h1>Game Canvas — Parte I</h1>
+
+            <p class="introduction">
+                Exemplo didático de criação de uma área de jogo com HTML,
+                CSS, JavaScript e Canvas.
+            </p>
+        </header>
+
+        <section
+            id="game-container"
+            class="game-container"
+            aria-labelledby="game-title"
+        >
+            <h2 id="game-title">Área do jogo</h2>
+
+            <p id="game-description">
+                Um quadrado vermelho é desenhado e movimentado dentro do
+                Canvas.
+            </p>
+
+            <div id="canvas-host" class="canvas-host"></div>
+        </section>
+
+        <p class="instructions">
+            O Canvas é criado dinamicamente pelo JavaScript e inserido nesta
+            seção.
+        </p>
+
+        <noscript>
+            Este exemplo precisa do JavaScript ativado no navegador.
+        </noscript>
+    </main>
+
+    <script type="module" src="js/game.js"></script>
+</body>
+</html>
