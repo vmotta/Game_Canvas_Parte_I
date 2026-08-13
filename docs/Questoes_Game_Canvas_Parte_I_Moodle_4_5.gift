@@ -1,0 +1,275 @@
+// Banco de questões - Game Canvas Parte I
+// Moodle 4.5 | Formato GIFT | UTF-8
+// 30 questões de múltipla escolha, cada uma com uma resposta correta e cinco incorretas.
+
+$CATEGORY: Game Canvas/Parte I
+
+::GC01 - Objetivo do projeto::[markdown]Qual é o principal objetivo do projeto Game Canvas — Parte I? {
+~Criar um banco de dados para armazenar jogadores.
+=Introduzir a criação de gráficos e animações com HTML Canvas e JavaScript.
+~Desenvolver um jogo tridimensional completo.
+~Criar uma aplicação exclusivamente com CSS.
+~Ensinar programação para dispositivos móveis.
+~Construir um servidor de jogos multiplayer.
+}
+
+::GC02 - Dimensões do Canvas::[markdown]Quais são as dimensões internas do Canvas utilizado no projeto? {
+~800 × 600 pixels.
+~300 × 300 pixels.
+~640 × 480 pixels.
+=480 × 270 pixels.
+~1920 × 1080 pixels.
+~270 × 480 pixels.
+}
+
+::GC03 - Dimensões do componente::[markdown]Quais são as dimensões iniciais do componente vermelho? {
+=30 × 30 pixels.
+~20 × 40 pixels.
+~50 × 50 pixels.
+~10 × 120 pixels.
+~480 × 270 pixels.
+~90 × 30 pixels.
+}
+
+::GC04 - Posição inicial::[markdown]Em qual posição o componente vermelho começa? {
+~`(0, 0)`.
+~`(120, 10)`.
+~`(30, 30)`.
+~`(480, 270)`.
+~`(90, 120)`.
+=`(10, 120)`.
+}
+
+::GC05 - Direção do movimento::[markdown]Em qual direção o componente se movimenta na versão básica? {
+~Verticalmente para cima.
+~Verticalmente para baixo.
+=Horizontalmente para a direita.
+~Horizontalmente para a esquerda.
+~Diagonalmente para baixo.
+~Em movimento circular.
+}
+
+::GC06 - Contexto 2D::[markdown]O que é obtido por meio de `canvas.getContext("2d")`? {
+~O endereço do arquivo CSS.
+~Um novo elemento HTML.
+~A resolução da tela do computador.
+~O código-fonte da página.
+=O objeto utilizado para desenhar no Canvas.
+~A lista de componentes do jogo.
+}
+
+::GC07 - Parâmetros de fillRect::[markdown]Qual é a ordem correta dos parâmetros de `fillRect()`? {
+~`width, height, x, y`.
+=`x, y, width, height`.
+~`x, width, y, height`.
+~`color, x, y, size`.
+~`height, width, x, y`.
+~`x, y, color, speed`.
+}
+
+::GC08 - Origem do Canvas::[markdown]Onde fica a origem `(0, 0)` do sistema de coordenadas do Canvas? {
+=No canto superior esquerdo.
+~No centro.
+~No canto inferior esquerdo.
+~No canto superior direito.
+~No canto inferior direito.
+~Fora da área visível.
+}
+
+::GC09 - Aumento de x::[markdown]O que acontece quando o valor de `x` aumenta? {
+~O componente aumenta de tamanho.
+~O componente muda de cor.
+~O componente se move para cima.
+=O componente se move para a direita.
+~O componente se move para baixo.
+~O Canvas é apagado.
+}
+
+::GC10 - Aumento de y::[markdown]O que acontece quando o valor de `y` aumenta? {
+~O componente se move para a esquerda.
+~O componente se move para a direita.
+~O componente fica mais rápido.
+~O componente fica transparente.
+~O componente se move para cima.
+=O componente se move para baixo.
+}
+
+::GC11 - Membros de gameArea::[markdown]Qual alternativa classifica corretamente os membros de `gameArea`? {
+~Todos são métodos.
+~Todos são propriedades.
+=`canvas` e `context` são propriedades; `start()`, `clear()` e `assertContext()` são métodos.
+~`canvas` é método e `start()` é propriedade.
+~Apenas `context` é método.
+~`clear()` é uma classe e `canvas` é uma função.
+}
+
+::GC12 - Palavra-chave this::[markdown]O que `this` representa dentro dos métodos de `gameArea`? {
+~O navegador.
+~A classe `GameComponent`.
+~O componente vermelho.
+~O documento HTML.
+=O próprio objeto `gameArea`.
+~O arquivo CSS.
+}
+
+::GC13 - Criação do Canvas::[markdown]Qual instrução cria um elemento Canvas em JavaScript? {
+~`document.getElementById("canvas")`.
+=`document.createElement("canvas")`.
+~`document.querySelector("canvas")`.
+~`new CanvasFile()`.
+~`window.createCanvas()`.
+~`context.createElement("2d")`.
+}
+
+::GC14 - Inserção com prepend::[markdown]Qual é a função de `canvasHost.prepend(this.canvas)`? {
+~Apagar o Canvas.
+~Alterar a cor do Canvas.
+~Criar o contexto 2D.
+=Inserir o Canvas no início do contêiner `canvasHost`.
+~Aumentar a velocidade do componente.
+~Substituir o arquivo HTML.
+}
+
+::GC15 - Contêiner do Canvas::[markdown]Para que serve a `<div id\="canvas-host">`? {
+=Reservar o local onde o Canvas será inserido.
+~Armazenar as configurações do jogador.
+~Executar o laço de animação.
+~Definir a cor do componente.
+~Substituir o elemento `<body>`.
+~Criar um servidor local.
+}
+
+::GC16 - Script como módulo::[markdown]Qual é a finalidade de `type\="module"` no elemento `<script>`? {
+~Transformar o JavaScript em CSS.
+~Fazer o Canvas ocupar a tela inteira.
+~Impedir o uso de classes.
+~Desativar o modo estrito.
+~Criar automaticamente o arquivo `game.js`.
+=Permitir JavaScript modular e executar o script após a análise do HTML.
+}
+
+::GC17 - requestAnimationFrame::[markdown]Por que `requestAnimationFrame()` é adequado para animações? {
+~Porque substitui completamente o JavaScript.
+~Porque grava automaticamente cada quadro.
+=Porque sincroniza a atualização com o ciclo de renderização do navegador.
+~Porque impede que o componente se movimente.
+~Porque transforma o Canvas em uma imagem.
+~Porque executa o código somente uma vez.
+}
+
+::GC18 - Tempo decorrido::[markdown]Como o tempo decorrido em segundos é calculado? {
+~`timestamp * previousTimestamp`.
+~`timestamp / 60`.
+~`previousTimestamp / timestamp`.
+~`timestamp + previousTimestamp`.
+=`(timestamp - previousTimestamp) / 1000`.
+~`(timestamp + previousTimestamp) * 1000`.
+}
+
+::GC19 - Limpeza do Canvas::[markdown]Qual chamada evita que o componente deixe um rastro no Canvas? {
+~`gameArea.start()`.
+=`gameArea.clear()`.
+~`player.validatePosition()`.
+~`document.createElement()`.
+~`Object.freeze()`.
+~`canvasHost.prepend()`.
+}
+
+::GC20 - Congelamento da configuração::[markdown]Por que `Object.freeze()` é aplicado a `GAME_CONFIG` e também a `player`? {
+~Para excluir as configurações depois da execução.
+~Para aumentar a velocidade da animação.
+~Para transformar as configurações em texto.
+=Para evitar alterações acidentais no objeto externo e no objeto interno `player`.
+~Para permitir que qualquer função modifique os valores.
+~Para desenhar o jogador no Canvas.
+}
+
+::GC21 - Classe GameComponent::[markdown]Qual é a função da classe `GameComponent`? {
+=Servir como modelo para os elementos retangulares do jogo.
+~Criar o servidor local.
+~Carregar o arquivo CSS.
+~Alterar o conteúdo do README.
+~Substituir o objeto `gameArea`.
+~Criar o elemento `<main>`.
+}
+
+::GC22 - Validação da largura::[markdown]O que acontece se uma largura negativa for enviada ao construtor de `GameComponent`? {
+~O componente será desenhado normalmente.
+~O Canvas terá sua largura invertida.
+~A largura será automaticamente convertida em zero.
+~O componente mudará de direção.
+~A página será redirecionada.
+=Será lançado um `TypeError`.
+}
+
+::GC23 - Reentrada pela esquerda::[markdown]O que acontece quando `this.x` ultrapassa a largura do Canvas? {
+~A animação é encerrada.
+~O Canvas é removido.
+=`this.x` recebe `-this.width`, fazendo o componente reaparecer pela esquerda.
+~A velocidade recebe zero.
+~A posição `y` recebe 270.
+~O componente muda para a cor azul.
+}
+
+::GC24 - Responsividade do Canvas::[markdown]Qual é a finalidade de `max-width\: 100%` aplicado ao Canvas? {
+~Fazer o Canvas ter sempre 100 pixels.
+~Alterar suas coordenadas internas.
+~Aumentar automaticamente a resolução.
+~Impedir a utilização de JavaScript.
+=Adaptar visualmente o Canvas à largura disponível.
+~Fazer o componente ocupar toda a página.
+}
+
+::GC25 - Modelo de caixa::[markdown]Qual é a função de `box-sizing\: border-box`? {
+~Criar uma borda obrigatória em todos os elementos.
+=Incluir bordas e preenchimentos no cálculo das dimensões dos elementos.
+~Transformar todos os elementos em caixas quadradas.
+~Remover o preenchimento dos elementos.
+~Impedir a aplicação de margens.
+~Centralizar automaticamente os elementos.
+}
+
+::GC26 - Acessibilidade::[markdown]Qual conjunto de recursos melhora a acessibilidade do Canvas no projeto? {
+~`backgroundColor` e `fillRect()`.
+~`Object.freeze()` e `clearRect()`.
+~`speed` e `deltaTime`.
+=`tabIndex`, `aria-label` e indicação visual de foco.
+~`requestAnimationFrame()` e `setInterval()`.
+~`width`, `height` e `startX`.
+}
+
+::GC27 - Estrutura de pastas::[markdown]Qual estrutura de pastas está correta? {
+=`index.html` na raiz, `styles.css` em `css` e `game.js` em `js`.
+~Todos os arquivos dentro da pasta `js`.
+~`index.html` dentro de `css` e os outros arquivos na raiz.
+~`styles.css` dentro de `js` e `game.js` dentro de `css`.
+~Apenas um arquivo chamado `game.html`.
+~`index.html` dentro da pasta `docs`.
+}
+
+::GC28 - Diagnóstico dos estilos::[markdown]A página aparece sem estilos. Qual é a causa mais provável? {
+~A velocidade do componente está baixa.
+~O Canvas possui largura de 480 pixels.
+~A função `clear()` foi chamada.
+~O jogador está na posição `(10, 120)`.
+~O contexto 2D foi criado.
+=O caminho para `css/styles.css` está incorreto.
+}
+
+::GC29 - Continuidade da animação::[markdown]Qual instrução deve aparecer ao final de `updateGameArea()` para continuar a animação? {
+~`document.close()`.
+~`gameArea.start()`.
+=`requestAnimationFrame(updateGameArea)`.
+~`player \= null`.
+~`context.stop()`.
+~`Object.freeze(updateGameArea)`.
+}
+
+::GC30 - Vários componentes::[markdown]No desafio com vários componentes, qual é uma boa forma de organizá-los? {
+~Criar uma página HTML para cada componente.
+~Utilizar somente variáveis globais sem `const` ou `let`.
+~Limpar o Canvas separadamente para cada componente.
+~Criar um contexto 2D diferente para cada objeto.
+=Armazenar os componentes em um array e percorrê-lo para mover e desenhar cada objeto.
+~Substituir o Canvas por uma tabela HTML.
+}
